@@ -7,4 +7,14 @@ public class KarateCoach implements Coach {
 		return "Make some karate";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		return fortuneService.getFortune();
+	}
+
+	private FortuneService fortuneService;
+
+	public KarateCoach(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
 }
