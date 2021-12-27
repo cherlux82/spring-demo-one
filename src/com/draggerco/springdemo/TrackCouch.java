@@ -12,7 +12,7 @@ public class TrackCouch implements Coach {
 	private FortuneService fortuneService;
 
 	public TrackCouch() {
-		 
+
 	}
 
 	public TrackCouch(FortuneService fortuneService) {
@@ -28,4 +28,13 @@ public class TrackCouch implements Coach {
 	public String getDailyWorkout() {
 		return "Run a hard 5K";
 	}
+
+	public void doMyStartupStuff() {
+		System.out.println("TrackCouch tareas de inicializacion");
+	}
+
+	public void doMyCleanupStuff() {
+		System.out.println("TrackCouch tareas de finalizacion");
+	}
+
 }
