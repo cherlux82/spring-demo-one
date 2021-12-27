@@ -13,9 +13,18 @@
 	<bean id="myFortune"
 		class="com.draggerco.springdemo.HappyFortuneService"></bean>
 
+<!-- Define your beans here -->
+	<bean id="myRandomFortune"
+		class="com.draggerco.springdemo.RandomFortuneService"></bean>
+		
 	<bean id="myCoach" class="com.draggerco.springdemo.TrackCouch">
 		<constructor-arg ref="myFortune"></constructor-arg>
 	</bean>
+	
+	<bean id="myKarateCoach" class="com.draggerco.springdemo.KarateCoach">
+		<constructor-arg ref="myRandomFortune"></constructor-arg>
+	</bean>
+	
 
 	<bean id="myCricketCoach"
 		class="com.draggerco.springdemo.CicketCoach">
